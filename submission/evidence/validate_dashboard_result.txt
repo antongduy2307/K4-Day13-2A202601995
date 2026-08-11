@@ -1,0 +1,25 @@
+# Dashboard Validator Result
+# Generated: 2026-08-11
+
+VALIDATOR_RESULT: PASSED
+COMMAND: python scripts/validate_dashboard.py
+OUTPUT: HỢP LỆ: 6/6 panel có trong dashboard contract.
+
+Dashboard Configuration:
+- Schema Version: 1
+- Time Range: 60 minutes
+- Refresh Rate: 30 seconds
+- Panel Count: 6
+
+Panels Validated:
+1. latency - Latency percentiles (P50, P95, P99)
+2. traffic - Request traffic
+3. errors - Error rate and breakdown
+4. cost - Cost over time
+5. tokens - Input and output tokens
+6. quality - Quality proxy
+
+SLO Configuration:
+- latency_p95_ms: objective 3000ms, target 99.5%
+- error_rate_pct: objective 2%, target 99.0%
+- quality_score_avg: objective 0.75, target 95.0%

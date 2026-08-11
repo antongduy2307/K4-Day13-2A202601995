@@ -1,0 +1,80 @@
+{
+  "generated_at": "2026-08-11T14:55:05.807094",
+  "time_range": "2026-08-11T07:40:55.053313Z to 2026-08-11T07:41:43.274147Z",
+  "total_logs": 21,
+  "panels": {
+    "latency": {
+      "p50": 150,
+      "p95": 150,
+      "p99": 150,
+      "threshold_p95_lte_3000ms": true,
+      "status": "ok"
+    },
+    "traffic": {
+      "count": 10,
+      "rate_per_minute": 10,
+      "threshold_rate_gte_1": true,
+      "status": "ok"
+    },
+    "errors": {
+      "error_rate_pct": 0.0,
+      "count_by_value": {},
+      "failed_requests": 0,
+      "total_requests": 10,
+      "threshold_error_rate_lte_2pct": true,
+      "status": "ok"
+    },
+    "cost": {
+      "sum_by_minute": {
+        "window_1": 0.022245
+      },
+      "total": 0.022245,
+      "threshold_total_lte_2.5usd": true,
+      "status": "ok"
+    },
+    "tokens": {
+      "sum_tokens_in": 330,
+      "sum_tokens_out": 1417,
+      "total": 1747,
+      "threshold_total_lte_50000": true,
+      "status": "ok"
+    },
+    "quality": {
+      "mean": 0.88,
+      "sample_count": 10,
+      "threshold_mean_gte_0.75": true,
+      "status": "ok"
+    }
+  },
+  "slo_config": {
+    "latency_p95_ms": {
+      "objective": 3000,
+      "target": 99.5
+    },
+    "error_rate_pct": {
+      "objective": 2,
+      "target": 99.0
+    },
+    "quality_score_avg": {
+      "objective": 0.75,
+      "target": 95.0
+    }
+  },
+  "alerts": [
+    {
+      "name": "HighLatency",
+      "severity": "critical",
+      "condition": "p95 > 3000ms for 5m"
+    },
+    {
+      "name": "HighErrorRate",
+      "severity": "critical",
+      "condition": "rate > 2% for 3m"
+    },
+    {
+      "name": "LowQualityScore",
+      "severity": "warning",
+      "condition": "mean < 0.75 for 10m"
+    }
+  ]
+}

@@ -1,3 +1,6 @@
+# Alert Rules Configuration
+# Generated: 2026-08-11
+
 alerts:
   - name: HighLatency
     severity: critical
@@ -5,6 +8,8 @@ alerts:
     type: symptom-based
     owner: platform-team
     runbook: docs/alerts.md#high-latency
+    sli: latency_p95_ms
+    slo_target: 99.5%
 
   - name: HighErrorRate
     severity: critical
@@ -12,6 +17,8 @@ alerts:
     type: symptom-based
     owner: platform-team
     runbook: docs/alerts.md#high-error-rate
+    sli: error_rate_pct
+    slo_target: 99.0%
 
   - name: LowQualityScore
     severity: warning
@@ -19,3 +26,5 @@ alerts:
     type: symptom-based
     owner: ml-team
     runbook: docs/alerts.md#low-quality-score
+    sli: quality_score_avg
+    slo_target: 95.0%
