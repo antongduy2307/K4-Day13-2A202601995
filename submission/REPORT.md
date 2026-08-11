@@ -69,6 +69,6 @@
 
 | Thành viên | Phần việc | Commit/PR | Điều đã học |
 |---|---|---|---|
-| Người 1 | Logging & PII (correlation ID, enrichment, redaction) + Tracing & Prompt Version (prompt v1/v2, label, rollback) | `a068d6f` | JSON structured logging, structlog contextvars, regex PII redaction, Langfuse prompt management |
-| Người 2 | Dashboard, SLO & Alert (6 panel, threshold, SLO, alert rules, runbook) | `f572a80` | percentile/aggregation theo contract, symptom-based alerting |
-| Người 3 | Incident, Report & Demo: chạy challenge chính thức, nối Metrics → Traces → Logs, xác định root cause, viết report, chuẩn bị demo | (điền commit SHA sau khi commit) | luồng điều tra incident thực tế, phân biệt symptom (metrics) và root cause (log/trace), ảnh hưởng của xử lý đồng bộ trong async handler tới latency dưới tải đồng thời |
+| Tống Duy An - 01995 | Logging & PII (correlation ID, enrichment, redaction) + Tracing & Prompt Version (prompt v1/v2, label, rollback) | `a068d6f` | JSON structured logging, structlog contextvars, regex PII redaction, Langfuse prompt management |
+| Nguyễn Việt Đăng Khoa - 01794 | Dashboard, SLO & Alert (6 panel, threshold, SLO, alert rules, runbook) | `f572a80` | percentile/aggregation theo contract, symptom-based alerting |
+| Ngô Mạnh Minh Huy - 01926| Incident, Report & Demo: chạy challenge chính thức, nối Metrics → Traces → Logs, xác định root cause, viết report, chuẩn bị demo | (điền commit SHA sau khi commit) | luồng điều tra incident thực tế, phân biệt symptom (metrics) và root cause (log/trace), ảnh hưởng của xử lý đồng bộ trong async handler tới latency dưới tải đồng thời |
